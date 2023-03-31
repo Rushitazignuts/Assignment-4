@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+table {
+  width: 100% !important;
+}
+
+.mat-mdc-form-field {
+  width: 100% !important;
+}
+
+td,
+th {
+  width: 25% !important;
+}
+
+.stats {
+  width: 230px;
+}/*# sourceMappingURL=dashboard.component.css.map */
