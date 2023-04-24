@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'customer', component: CustomerComponent },
   { path: 'addCustomer', component: AddcustomerComponent },
   { path: 'chart', component: ChartComponent },
+ 
   
 ];
 

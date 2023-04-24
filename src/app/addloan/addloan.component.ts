@@ -29,7 +29,7 @@ export class AddloanComponent implements OnInit {
       Notes: ['', Validators.required],
     });
     if (this.editData) {
-      this.actionBtn = 'Update';
+      this.actionBtn = 'update';
       this.productForm.controls['PaymentId'].setValue(this.editData.PaymentId);
       this.productForm.controls['CustomerId'].setValue(
         this.editData.CustomerId

@@ -5,7 +5,7 @@
   </button>
 </div>
 
-<div class="container-fluid bg-light">
+<!-- <div class="container-fluid bg-light">
   <mat-form-field>
     <input
       matInput
@@ -14,7 +14,7 @@
       #input
     />
   </mat-form-field>
-</div>
+</div> 
 
 <div class="mat-elevation-z8 container-fluid bg-light" style="overflow: scroll">
   <table mat-table [dataSource]="dataSource" matSort>
@@ -52,7 +52,8 @@
     <ng-container matColumnDef="Notes">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Notes</th>
       <td mat-cell *matCellDef="let row">{{ row.Notes }}</td>
-    </ng-container>
+    </ng-container> 
+   
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>action</th>
       <td mat-cell *matCellDef="let row">
@@ -75,8 +76,23 @@
       </td>
     </tr>
   </table>
-</div>
+
+
+</div> 
 <mat-paginator
   [pageSizeOptions]="[5, 10, 25, 100]"
   aria-label="Select page of users"
-></mat-paginator>
+></mat-paginator>-->
+
+<app-table
+  [tableColumns]="tableColumns"
+  [loanData]="loanData"
+  [rowActionIcon]="'edit'"
+  (editLoan)="editData($event)"
+  (deleteLoan)="deleteData($event)"
+>
+</app-table>
+
+<!-- (deleteLoan)="deleteData($event)" -->
+
+

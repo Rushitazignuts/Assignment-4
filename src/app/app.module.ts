@@ -30,10 +30,33 @@ import { FilterPipe } from './filter.pipe';
 import { ChartComponent } from './chart/chart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { TableComponent } from './comman/table/table.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { ButtonComponent } from './comman/button/button.component';
+import { LoanService } from './service/loan.service';
+import { ExtraComponent } from './extra/extra.component';
+import { SortPipe } from './pipe/sort.pipe';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
+import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
+import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { SideComponent } from './side/side.component';
 @NgModule({
   declarations: [
     AppComponent,
+    
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
@@ -43,6 +66,13 @@ import { MatDividerModule } from '@angular/material/divider';
     AddcustomerComponent,
     FilterPipe,
     ChartComponent,
+    TableComponent,
+    ButtonComponent,
+    ExtraComponent,
+    SortPipe,
+    SideComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -66,8 +96,25 @@ import { MatDividerModule } from '@angular/material/divider';
     MatListModule,
     NgApexchartsModule,
     MatDividerModule,
+    MatMenuModule,
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule,
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [LoanService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

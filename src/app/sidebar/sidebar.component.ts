@@ -8,13 +8,30 @@ declare var $:any;
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  @ViewChild(MatSidenav)
+//   @ViewChild(MatSidenav)
+//   sidenav!:MatSidenav;
+//   constructor(private observer:BreakpointObserver){}
+// ngAfterViewInit(){
+//   this.observer.observe(['(max-width:576px)']).subscribe((res)=>{
+// if(res.matches){
+//   this.sidenav.mode='side';
+//   this.sidenav.close();
+
+// }else{
+//   this.sidenav.mode="side";
+//   this.sidenav.open();
+// }
+//   })
+
+//   }
+
+@ViewChild(MatSidenav)
   sidenav!:MatSidenav;
   constructor(private observer:BreakpointObserver){}
 ngAfterViewInit(){
-  this.observer.observe(['(max-width:576px)']).subscribe((res)=>{
+  this.observer.observe(['(max-width:800px)']).subscribe((res)=>{
 if(res.matches){
-  this.sidenav.mode='side';
+  this.sidenav.mode='over';
   this.sidenav.close();
 
 }else{
@@ -24,6 +41,8 @@ if(res.matches){
   })
 
   }
+
+
 }
 
 

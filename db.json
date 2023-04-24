@@ -1,54 +1,6 @@
 {
   "post": [
     {
-      "id": 1,
-      "name": "john",
-      "type": "@mdo",
-      "payment": "USA",
-      "due": "jermany",
-      "status": "active"
-    },
-    {
-      "id": 2,
-      "name": "kirti",
-      "type": "@fat",
-      "payment": "italy",
-      "due": "norve",
-      "status": "inactive"
-    },
-    {
-      "id": 3,
-      "name": "thomas",
-      "type": "@fat",
-      "payment": "USA",
-      "due": "new York",
-      "status": "active"
-    },
-    {
-      "id": 4,
-      "name": "doe",
-      "type": "@twitter",
-      "payment": "USA",
-      "due": "berlin",
-      "status": "active"
-    },
-    {
-      "id": 5,
-      "name": "kate",
-      "type": "@twitter",
-      "payment": "spain",
-      "due": "uk",
-      "status": "active"
-    },
-    {
-      "id": 6,
-      "name": "otto",
-      "type": "@mdo",
-      "payment": "italy",
-      "due": "london",
-      "status": "active"
-    },
-    {
       "id": 7,
       "name": "john doe",
       "type": "@mdo",
@@ -83,17 +35,18 @@
   ],
   "loans": [
     {
+      "id": 200,
       "PaymentId": "501",
       "CustomerId": "201",
-      "CustomerName": "joh",
+      "CustomerName": "john",
       "Amount": "$1234",
       "Tax": "7%",
       "Mode": "online",
       "Date": "1-2-2022",
-      "Notes": "notes",
-      "id": 701
+      "Notes": "notes"
     },
     {
+      "id": 201,
       "PaymentId": "502",
       "CustomerId": "202",
       "CustomerName": "john",
@@ -101,10 +54,10 @@
       "Tax": "7%",
       "Mode": "online",
       "Date": "1-2-2022",
-      "Notes": "notes",
-      "id": 702
+      "Notes": "notes"
     },
     {
+      "id": 202,
       "PaymentId": "503",
       "CustomerId": "203",
       "CustomerName": "john",
@@ -112,10 +65,10 @@
       "Tax": "7%",
       "Mode": "online",
       "Date": "1-2-2022",
-      "Notes": "notes",
-      "id": 703
+      "Notes": "notes"
     },
     {
+      "id": 203,
       "PaymentId": "505",
       "CustomerId": "706",
       "CustomerName": "kirti",
@@ -123,10 +76,10 @@
       "Tax": "8%",
       "Mode": "cash",
       "Date": "1-2-2022",
-      "Notes": "this is note",
-      "id": 704
+      "Notes": "this is note"
     },
     {
+      "id": 204,
       "PaymentId": "506",
       "CustomerId": "707",
       "CustomerName": "nik",
@@ -134,10 +87,10 @@
       "Tax": "8%",
       "Mode": "online",
       "Date": "1-2-2022",
-      "Notes": "this is note",
-      "id": 705
+      "Notes": "this is note"
     },
     {
+      "id": 205,
       "PaymentId": "508",
       "CustomerId": "708",
       "CustomerName": "duo",
@@ -145,79 +98,121 @@
       "Tax": "9%",
       "Mode": "cash",
       "Date": "2-2-2023",
-      "Notes": "notes",
-      "id": 706
-    },
-    {
-      "PaymentId": "grhbr",
-      "CustomerId": "dvfdb",
-      "Amount": "j",
-      "Tax": "j",
-      "Mode": "jjk",
-      "Date": "k",
-      "Notes": "7",
-      "id": 707
-    },
-    {
-      "PaymentId": "45",
-      "CustomerId": "45",
-      "CustomerName": "tt",
-      "Amount": "676",
-      "Tax": "7",
-      "Mode": "on",
-      "Date": "4546",
-      "Notes": "b",
-      "id": 708
+      "Notes": "notes"
     }
   ],
   "Customers": [
     {
-      "firstName": "hello",
-      "lastName": "ruchi",
-      "loanType": "personal",
-      "loanAmount": "33445",
-      "email": "hgruhtu",
+      "firstName": "nikhil",
+      "lastName": "patel",
+      "loanType": "home",
+      "loanAmount": "$500",
+      "email": "nikhil@gmail.com",
       "alternateEmail": "",
-      "phone": "324354656",
+      "phone": "1357924681",
       "alternatePhone": "",
-      "address": "fdgrtfh",
+      "address": "1234 street in front",
       "address2": "",
-      "city": "vbfgh",
-      "state": "Rajasthan",
-      "zip": "",
-      "id": 18
+      "city": "rajkot",
+      "state": "Gujarat",
+      "zip": "123123",
+      "id": 28
     },
     {
-      "firstName": "ruchi",
-      "lastName": "patel",
-      "loanType": "personal",
-      "loanAmount": "345",
-      "email": "ruchi@gmail.com",
+      "firstName": "otto",
+      "lastName": "twit",
+      "loanType": "education",
+      "loanAmount": "$231",
+      "email": "otto@gmail.com",
       "alternateEmail": "",
-      "phone": "1111111111",
+      "phone": "9067845673",
       "alternatePhone": "",
-      "address": "1234 street",
+      "address": "main street, mumbai",
       "address2": "",
-      "city": "surat",
-      "state": "Gujarat",
-      "zip": "",
-      "id": 19
+      "city": "mumbai",
+      "state": "Mp",
+      "zip": "135246",
+      "id": 29
     },
     {
-      "firstName": "nik",
-      "lastName": "patel",
-      "loanType": "personal",
-      "loanAmount": "$1234",
-      "email": "nik@gmail.com",
+      "firstName": "otto",
+      "lastName": "twit",
+      "loanType": "education",
+      "loanAmount": "$231",
+      "email": "otto@gmail.com",
       "alternateEmail": "",
-      "phone": "3412341234",
+      "phone": "9067845673",
       "alternatePhone": "",
-      "address": "12333 street",
+      "address": "main street, mumbai",
       "address2": "",
-      "city": "jamnagar",
+      "city": "mumbai",
+      "state": "Mp",
+      "zip": "135246",
+      "id": 30
+    },
+    {
+      "firstName": "otto",
+      "lastName": "twit",
+      "loanType": "education",
+      "loanAmount": "$231",
+      "email": "otto@gmail.com",
+      "alternateEmail": "",
+      "phone": "9067845673",
+      "alternatePhone": "",
+      "address": "main street, mumbai",
+      "address2": "",
+      "city": "mumbai",
+      "state": "Mp",
+      "zip": "135246",
+      "id": 31
+    },
+    {
+      "firstName": "kruti",
+      "lastName": "rabadiya",
+      "loanType": "education",
+      "loanAmount": "$345",
+      "email": "kruti@gmail.com",
+      "alternateEmail": "",
+      "phone": "1234567899",
+      "alternatePhone": "",
+      "address": "1234 street main road",
+      "address2": "",
+      "city": "vadodara",
       "state": "Gujarat",
+      "zip": "111111",
+      "id": 32
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "loanType": "",
+      "loanAmount": "",
+      "email": "",
+      "alternateEmail": "",
+      "phone": "",
+      "alternatePhone": "",
+      "address": "",
+      "address2": "",
+      "city": "",
+      "state": "",
       "zip": "",
-      "id": 20
+      "id": 33
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "loanType": "",
+      "loanAmount": "",
+      "email": "",
+      "alternateEmail": "",
+      "phone": "",
+      "alternatePhone": "",
+      "address": "",
+      "address2": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "id": 34
     }
   ]
 }

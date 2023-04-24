@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Dashboard } from '../dashboard/dashboard.component';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -10,6 +13,10 @@ export class LoanService {
   customerUrl = 'http://localhost:3000/Customers/';
   getData() {
     return this.Http.get<any>(this.url);
+  }
+  deleteData(id:number){
+    return this.Http.delete(this.url +id)
+
   }
   getLoanData() {
     return this.Http.get<any>(this.loanUrl);
@@ -26,13 +33,30 @@ export class LoanService {
   put(data: any, id: number) {
     return this.Http.put<any>('http://localhost:3000/loans/' + id, data);
   }
-  delete(id: number) {
+  deleteLoan(id: number) {
     console.log(id);
-    console.log('http://localhost:3000/loans/' + id);
-    return this.Http.delete<any>('http://localhost:3000/loans/' + id);
+    
+    return this.Http.delete<any>('http://localhost:3000/loans/'+id);
   }
   CDelete(id: number) {
     console.log(id);
     return this.Http.delete<any>('http://localhost:3000/Customers/' + id);
   }
+
+
+
+  public get name(){
+    return localStorage.getItem('name');
+  }
+  public set name(value:any){
+     localStorage.setItem('name',value);
+  }
+
+public get user(){
+  return localStorage.getItem('user');
+} 
+public set user(value:any){
+  localStorage.setItem('user',JSON.stringify(value));
+}
+
 }

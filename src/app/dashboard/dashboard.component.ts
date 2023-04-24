@@ -1,52 +1,118 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
 import { LoanService } from '../service/loan.service';
-// export interface UserData {
-//   id: string;
-//   name: string;
-//   username: string;
-//   email: string;
-// }
+
+export interface Column {
+  columnDef: string;
+  header: string;
+}
+export interface Dashboard {
+  id: number;
+  name: string;
+  type: string;
+  payment: string;
+  due: string;
+  status: string;
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  displayedColumns: string[] = [
-    'id',
-    'name',
-    'type',
-    'payment',
-    'due',
-    'status',
-  ];
-  dataSource!: MatTableDataSource<any>;
+  isClick=false
+
+  curr = 'Dashboard';
   getData: any;
-  
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
+
+  tableData: any;
+  tableColumns!: Column[];
+
   constructor(private loanService: LoanService) {}
   ngOnInit() {
-    this.loanService.getData().subscribe((data: any) => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-      console.log(data);
+    
+   this.tableData= this.loanService.getData().subscribe((data:any)=>{
+      this.getData=data;
       
       
     });
+    
+    this.initColumns();
   }
+  // getDashboard(): Dashboard[] {
+  //   return  [
+  //     {
+  //       id: 1,
+  //       name: 'Hydrogen',
+  //       type: '@twitter',
+  //       payment: 'H',
+  //       due: 'usa',
+  //       status: 'active',
+  //     },
+  //     {
+  //       id: 2,
+  //       name: 'Helium',
+  //       type: '@twitter',
+  //       payment: 'He',
+  //       due: 'usa',
+  //       status: 'active',
+  //     },
+  //     {
+  //       id: 3,
+  //       name: 'Lithium',
+  //       type: '@twitter',
+  //       payment: 'Li',
+  //       due: 'usa',
+  //       status: 'active',
+  //     },
+  //   ];
+  // }
   
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  initColumns(): void {
+    this.tableColumns = [
+      {
+        columnDef: 'id',
+        header: 'Id',
+      },
+      {
+        columnDef: 'name',
+        header: 'Name',
+      },
+      {
+        columnDef: 'type',
+        header: 'Type',
+      },
+      {
+        columnDef: 'payment',
+        header: 'Payment',
+      },
+      {
+        columnDef: 'due',
+        header: 'Due',
+      },
+      {
+        columnDef: 'status',
+        header: 'Status',
+      },
+    ];
+  }
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
+  deleteData(id:number){
+    if (confirm('are you sure want to delete')) {
+      this.loanService.deleteData(id).subscribe({
+        next: (res) => {
+          alert('delete');
+          
+        },
+        error: () => {
+          alert('error');
+        },
+      });
     }
   }
+  
 }
+// onTableAction(event:any){
+//   console.log('event', event)
+// }

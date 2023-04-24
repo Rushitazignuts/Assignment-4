@@ -57,8 +57,10 @@ export class AddcustomerComponent implements OnInit {
     console.log(this.customerForm.value);
     this.loanService.postcustomerData(this.customerForm.value).subscribe({
       next: (res) => {
-        alert('adedd');
+        alert('added');
+        this.customerForm.reset();
       },
+
       error: () => {
         alert('error');
       },
