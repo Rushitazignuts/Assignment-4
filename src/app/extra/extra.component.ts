@@ -84,33 +84,33 @@ export class ExtraComponent implements OnInit {
   login(event: any) {
     
     event.preventDefault();
-    this.signupUsers.push(this.loginObj);
+    //this.signupUsers.push(this.loginObj);
     const isUserExist = this.signupUsers.find(
       (m) =>
         m.email == this.loginObj.email && m.password == this.loginObj.password
     );
     if (isUserExist != undefined) {
       alert('login successfully!!');
-      const beforeLength = this.signupUsers.length;
-      this.signupUsers = this.signupUsers.filter(
-        (value, index, self) =>
-          index ===
-          self.findIndex(
-            (t) =>
+    //   const beforeLength = this.signupUsers.length;
+    //   this.signupUsers = this.signupUsers.filter(
+    //     (value, index, self) =>
+    //       index ===
+    //       self.findIndex(
+    //         (t) =>
              
-              t.email === value.email &&
-              t.password === value.password
-          )
-      );
-      const afterLength = this.signupUsers.length;
-      if (beforeLength === afterLength) {
-      localStorage.setItem('signupUsers', JSON.stringify(this.signupUsers));
-      this.loginObj = {
+    //           t.email === value.email &&
+    //           t.password === value.password
+    //       )
+    //   );
+    //   const afterLength = this.signupUsers.length;
+    //   if (beforeLength === afterLength) {
+    //   localStorage.setItem('signupUsers', JSON.stringify(this.signupUsers));
+    //   this.loginObj = {
         
-        email: '',
-        password: '',
-      };
-    }
+    //     email: '',
+    //     password: '',
+    //   };
+    // }
       this.router.navigate(['/customer']);
     } else {
       alert('Wrong credentials');
